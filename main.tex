@@ -10,7 +10,7 @@
 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
-\usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
+\usepackage[size=custom,width=121.92,height=60.96,scale=1.0]{beamerposter}
 \usetheme{gemini}
 % \usecolortheme{uchicago}
 \usecolortheme{stanford}
@@ -28,8 +28,10 @@
 % (N+1)*\sepwidth + N*\colwidth = \paperwidth
 \newlength{\sepwidth}
 \newlength{\colwidth}
-\setlength{\sepwidth}{0.025\paperwidth}
-\setlength{\colwidth}{0.3\paperwidth}
+\newlength{\widecolwidth}
+\setlength{\sepwidth}{0.0001\paperwidth}
+\setlength{\colwidth}{45cm}
+\setlength{\widecolwidth}{65cm}
 
 \newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
 
@@ -46,9 +48,9 @@
 % ====================
 
 \footercontent{
-  \href{rylanschaeffer.github.io}{rylanschaeffer.github.io} \hfill
-  NeurIPS 2021 Workshop: Metacognition in the Age of AI \hfill
-  \href{mailto:rylanschaeffer@gmail.com}{rylanschaeffer@gmail.com}}
+  \href{https://adaniabutto.com}{stanford.edu/\~ aabutto} \hfill
+	Biennial Meeting of the Cognitive Development Society \hfill
+  \href{mailto:aabutto@stanford.edu}{aabutto@stanford.edu}}
 
 % ====================
 % Logo (optional)
@@ -64,55 +66,39 @@
 
 \begin{document}
 
-% This adds the Logos on the top left and top right
-%\addtobeamertemplate{headline}{}
-%{
-%    \begin{tikzpicture}[remember picture,overlay]
-%    %   \node [anchor=north west, inner sep=3cm] at ([xshift=0.0cm,yshift=1.0cm]current page.north west)
-%    %   {\includegraphics[height=5.0cm]{stanford_logos/Stanford-CS.png}}; % uc-logo-white.eps
-%      \node [anchor=north east, inner sep=3cm] at ([xshift=0.0cm,yshift=2.5cm]current page.north east)
-%      {\includegraphics[height=7.0cm]{stanford_logos/Block_S_2_color.png}};
-%    \end{tikzpicture}
-%}
-
 \begin{frame}[t]
 \begin{columns}[t]
 \separatorcolumn
 
 \begin{column}{\colwidth}
 
-  \begin{block}{Introduction}
+  \begin{block}{BACKGROUND}
 
-    Some block contents, followed by a diagram, followed by a dummy paragraph.
+    \begin{itemize}
+      \item Young children assert that invisible but material things, such as air, are immaterial
+      \item While learners' \textbf{naive beliefs are revised} throughout development, \textbf{some aspects} are \textbf{retained} in adulthood
+      \item Even \textbf{expert adults regress to} responding in line with their \textbf{naive beliefs} when put under time pressure 
+    \end{itemize}
+    
+\begin{alertblock}{Research Question}
 
-    \begin{figure}
-      \centering
-      \begin{tikzpicture}[scale=6]
-        \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
-        \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
-          -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
-      \end{tikzpicture}
-      \caption{A figure caption.}
-    \end{figure}
+    Curabitur eu libero vehicula, cursus est fringilla, luctus est. Morbi
+    consectetur mauris quam, at finibus elit auctor ac.
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultricies
-    eget libero ac ullamcorper. Integer et euismod ante. Aenean vestibulum
-    lobortis augue, ut lobortis turpis rhoncus sed. Proin feugiat nibh a
-    lacinia dignissim. Proin scelerisque, risus eget tempor fermentum, ex
-    turpis condimentum urna, quis malesuada sapien arcu eu purus.
+  \end{alertblock}
 
   \end{block}
 
-  \begin{block}{Procedure}
+  \begin{block}{PROCEDURE}
 
     Nam vulputate nunc felis, non condimentum lacus porta ultrices. Nullam sed
     sagittis metus. Etiam consectetur gravida urna quis suscipit.
 
-    \begin{itemize}
-      \item \textbf{Mauris tempor} risus nulla, sed ornare
-      \item \textbf{Libero tincidunt} a duis congue vitae
-      \item \textbf{Dui ac pretium} morbi justo neque, ullamcorper
-    \end{itemize}
+    \begin{figure}
+      \centering
+	{\includegraphics[height=12cm]{images/procedure1.png}}
+      \caption{A figure caption.}
+    \end{figure}
 
     Eget augue porta, bibendum venenatis tortor.
 
@@ -122,15 +108,11 @@
 
 \separatorcolumn
 
-\begin{column}{\colwidth}
+\begin{column}{\widecolwidth}
 
-  \begin{block}{Results}
-
-    Et rutrum ex euismod vel. Pellentesque ultricies, velit in fermentum
-    vestibulum, lectus nisi pretium nibh, sit amet aliquam lectus augue vel
-    velit. Suspendisse rhoncus massa porttitor augue feugiat molestie. Sed
-    molestie ut orci nec malesuada. Sed ultricies feugiat est fringilla
-    posuere.
+  \begin{block}{RESULTS}
+  
+  \emph{N} = 79 five- to nine-year-olds
 
     \begin{figure}
       \centering
@@ -152,7 +134,7 @@
 
   \end{block}
     
-      \begin{block}{Discussion}
+      \begin{block}{DISCUSSION \& FUTURE DIRECTIONS}
 
     Nam vulputate nunc felis, non condimentum lacus porta ultrices. Nullam sed
     sagittis metus. Etiam consectetur gravida urna quis suscipit.
@@ -167,7 +149,7 @@
 
   \end{block}
 
-  \begin{block}{References}
+  \begin{block}{REFERENCES}
 
     \nocite{*}
     \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
