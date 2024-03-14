@@ -18,10 +18,11 @@
 \usepackage{booktabs}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage[export]{adjustbox}
 \pgfplotsset{compat=1.17}
 
 \AtBeginDocument{
-  \fontsize{32pt}{20pt} % Adjust 12pt to your desired font size, and 14pt to a suitable line spacing
+  \fontsize{32pt}{0.5ex} % Adjust 12pt to your desired font size, and 14pt to a suitable line spacing
 }
 
 % ====================
@@ -82,26 +83,24 @@
       \item While learners' \textbf{naive beliefs are revised} throughout development, \textbf{some aspects} are \textbf{retained} in adulthood
       \item Even \textbf{expert adults regress to} responding in line with their \textbf{naive beliefs} when put under time pressure 
     \end{itemize}
-    
-\begin{alertblock}{Research Question}
 
-    Do children respond more slowly to questions for which their answers are incongruent with a scientific theory than to questions for which their answers are congruent?
-
-  \end{alertblock}
+	\colorbox{red}{%
+	\parbox{\dimexpr\linewidth-2\fboxsep}{%
+	\textbf{Research Question}: Do children respond more slowly to questions for which their answers are incongruent with a scientific theory than to questions for which their answers are congruent?
+	}%
+	}
 
   \end{block}
 
   \begin{block}{PROCEDURE}
 
-    Children responded to \textbf{36 forced-choice questions} about \textbf{10 different entities} and their physical properties.
+    Children responded to \textbf{36 forced-choice questions} about \textbf{10 different entities} and their \textbf{physical properties}.
 
     \begin{figure}
       \centering
 	{\includegraphics[height=12cm]{images/procedure1.png}}
       \caption{A figure caption.}
     \end{figure}
-
-    Eget augue porta, bibendum venenatis tortor.
 
   \end{block}
 
@@ -113,25 +112,14 @@
 
   \begin{block}{RESULTS}
   
-  \emph{N} = 79 five- to nine-year-olds
+  \emph{N} = 79 five- to nine-year-old children
 
     \begin{figure}
-      \centering
-      \begin{tikzpicture}
-        \begin{axis}[
-            scale only axis,
-            no markers,
-            domain=0:2*pi,
-            samples=100,
-            axis lines=center,
-            axis line style={-},
-            ticks=none]
-          \addplot[red] {sin(deg(x))};
-          \addplot[blue] {cos(deg(x))};
-        \end{axis}
-      \end{tikzpicture}
+      	{\includegraphics[height=24cm,left]{plots/figure1.png}}
       \caption{Another figure caption.}
     \end{figure}
+    
+    Children were \textbf{slower in responding to incongruent items} than congruent ones: \emph{t}(79) = 2.08, \emph{d}  = .24 [-.06, .54], \emph{p} = .041.
 
   \end{block}
     
@@ -151,7 +139,7 @@
   \end{block}
 
   \begin{block}{REFERENCES}
-
+	We thank our funders.
     \nocite{*}
     \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
 
