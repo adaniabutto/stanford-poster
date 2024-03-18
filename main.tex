@@ -18,8 +18,11 @@
 \usepackage{booktabs}
 \usepackage{tikz}
 \usepackage{pgfplots}
+\usepackage[most]{tcolorbox}
 \usepackage[export]{adjustbox}
 \pgfplotsset{compat=1.17}
+
+\definecolor{mycolor}{RGB}{173,10,29}
 
 \AtBeginDocument{
   \fontsize{32pt}{0.5ex} % Adjust 12pt to your desired font size, and 14pt to a suitable line spacing
@@ -79,12 +82,24 @@
       \item  \textbf{Even \emph{before} acquiring beliefs aligned with scientific understanding}, learners’ \textbf{naive beliefs may conflict} with other parts of their knowledge (e.g., “air is nothing"; "we need air to breathe”)
        \item Elementary schoolers wrestling with such conflicting beliefs may respond more slowly to "incongruent" questions even \emph{before} learning the scientifically correct response
     \end{itemize}
-	\colorbox{red}{%
-	\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
-	\center
-	Among children with naive beliefs about the material world, are response times (RTs) slower for "theory-incongruent" questions than for "theory-congruent" questions?
-	}%
-	}
+    
+	\begin{tcolorbox}[
+		colback=mycolor,
+		colframe=mycolor,
+		boxsep=4pt,
+		left=2mm,
+		right=2mm,
+		top=2mm,
+		bottom=2mm,
+		arc=5mm,
+		auto outer arc,
+		boxrule=4pt,
+		width=\dimexpr\linewidth-2\fboxsep\relax,
+		]
+		\centering
+		Among children with naive beliefs about the material world, are response times (RTs) slower for ”theory-incongruent” questions than for ”theory-congruent” questions?
+	\end{tcolorbox}
+
 
   \end{block}
 
@@ -94,7 +109,7 @@
     
     \begin{figure}
       \centering
-	{\includegraphics[height=10cm]{images/procedure1.png}}
+	{\includegraphics[height=12cm]{images/procedure4.png}}
     \end{figure}
 
     \begin{itemize}
@@ -135,12 +150,22 @@ Mean diff. = 225 ms, \emph{d}  = .24, 95\% CIs, [-.06, .54], \emph{p} = .041; pa
 \end{block}
     
 \begin{block}{DISCUSSION \& FUTURE DIRECTIONS}
-	\colorbox{red}{%
-	\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
-	\center
-	Children's RTs may be informative of their being at the cusp of overturning naive, intuitive beliefs about the material world
-	}%
-	}
+	\begin{tcolorbox}[
+		colback=mycolor,
+		colframe=mycolor,
+		boxsep=2pt,
+		left=2mm,
+		right=2mm,
+		top=2mm,
+		bottom=2mm,
+		arc=5mm,
+		auto outer arc,
+		boxrule=4pt,
+		width=\dimexpr\linewidth-2\fboxsep\relax,
+		]
+		\centering
+		Children's RTs may be informative of their being at the cusp of overturning naive, intuitive beliefs about the material world.
+	\end{tcolorbox}
 	
     \begin{itemize}
       \item \textbf{Even before acquiring a scientific understanding} of matter and its properties, \textbf{preschool children show signs of hesitancy} when producing and communicating responses aligned with incorrect naive beliefs
